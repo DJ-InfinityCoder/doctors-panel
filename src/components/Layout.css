@@ -1,0 +1,29 @@
+.layout {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 215px;
+}
+
+.main-content {
+  margin-top: 57px;
+  padding: 10px 12px;
+  flex-grow: 1;
+  background-color: #f9e2e9a5;
+  /* Light background color for main content */
+  min-height: calc(100vh - 64px);
+}
+
+@media (max-width: 768px) {
+  .content {
+    margin-left: 0;
+  }
+
+}

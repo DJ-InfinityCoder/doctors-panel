@@ -1,0 +1,96 @@
+/* src/styles/PatientDetails.css */
+.patient-details-container {
+  padding: 24px;
+  background-color: #F8F8F8;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.patient-header {
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center; /* Align image and text in the same row */
+  margin-bottom: 24px;
+}
+
+.patient-header h4 {
+  margin-left: 16px; /* Add space between image and text */
+  color: #005679;
+  font-size: 24px;
+}
+
+.patient-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #005679;
+}
+
+.patient-basic-info{
+ margin-left: 20px;
+}
+
+.basic-info{
+  margin-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.basic-info p {
+  font-size: 16px;
+  color: #333;
+}
+
+.basic-info p strong {
+  color: #005679;
+}
+
+.patient-meetings {
+  margin-top: 24px;
+}
+
+.patient-meetings h6 {
+  margin-bottom: 16px;
+  font-size: 20px;
+  text-decoration: underline;
+  color: #005679;
+}
+
+.meetings-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.meetings-table th,
+.meetings-table td {
+  padding: 16px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+}
+
+.meetings-table th {
+  background-color: #068BBF;
+  color: white;
+}
+
+.meetings-table tr:hover {
+  background-color: #068bbf2a;
+}
+
+.meetings-table td a {
+  color: #0078d7;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.meetings-table td a:hover {
+  color: #005679;
+}

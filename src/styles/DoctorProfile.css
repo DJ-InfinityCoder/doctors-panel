@@ -1,0 +1,140 @@
+.profile-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f8f8f8; /* White background for contrast */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-container:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.profile-header {
+    gap: 30px;
+    display: flex;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-header-detail {
+    text-align: left;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+}
+
+.profile-photo {
+    background: #d7cece;
+    border-radius: 50%;
+    width: 180px; /* Increased photo size */
+    height: 180px; /* Increased photo size */
+    border: 5px solid #068BBF; /* Adding a border */
+    transition: transform 0.3s;
+}
+
+.profile-photo:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+h2 {
+    margin: 15px 0;
+    color: #005679;
+    font-size: 28px; /* Larger font size */
+    font-weight: bold;
+}
+
+.profile-details {
+    width: 100%;
+    margin-top: 20px; /* Added space above the table */
+    border-collapse: collapse; /* For table styling */
+}
+
+.profile-details th,
+.profile-details td {
+    padding: 12px 15px; /* Padding inside table cells */
+    border: 1px solid #e1e1e1; /* Border for table cells */
+    text-align: left; /* Left-aligned text */
+}
+
+.profile-details th {
+    background-color: #068BBF; /* Header background color */
+    color: #ffffff; /* Header text color */
+    font-weight: bold; /* Bold header */
+}
+
+.profile-details tr:nth-child(even) {
+    background-color: #f2f2f2; /* Zebra striping for table rows */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.edit-button {
+    background-color: #FF2A6D;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.edit-button:hover {
+    background-color: #e0295c; /* Darker shade on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Updated edit input styles */
+.edit-input {
+    width: 100%; /* Use full width of the table cell */
+    padding: 10px; /* Adjusted padding for better fit */
+    margin: 5px 0; /* Reduced margin above and below input */
+    border: 1.5px solid #e0295c; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    color: #333; /* Text color */
+    background-color: #f9f9f9; /* Light background color */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+.profile-details td {
+    vertical-align: middle; /* Vertically align content in the cell */
+    padding: 10px; /* Ensure there's padding for cell content */
+}
+
+.edit-input:focus {
+    border-color: #04bdca; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+    background-color: #ffffff; /* Change background color on focus */
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .profile-container {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .profile-photo {
+        width: 140px; /* Responsive adjustment for smaller screens */
+        height: 140px; /* Responsive adjustment for smaller screens */
+    }
+
+    h2 {
+        font-size: 24px; /* Responsive font size for smaller screens */
+    }
+
+    .profile-details th,
+    .profile-details td {
+        padding: 10px 12px; /* Adjust padding for smaller screens */
+    }
+}

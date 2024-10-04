@@ -1,0 +1,275 @@
+.appointments-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8b6;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.appointments-title {
+  font-size: 24px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.search-container {
+  background-color: #ffffff; /* Input background color */
+  border-radius: 50px;
+  padding: 5px 10px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  border: 2px solid #005679;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 100%;
+  border: none;
+  outline: none; /* Remove outline */
+}
+
+.search-icon {
+  color: #0380b2; /* Search icon color */
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.view-options {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.view-options label {
+  color: #000000;
+  font-size: 20px;
+  font-weight: 520;
+}
+
+.date-filter {
+  padding: 7px;
+  border: 1px solid #005679;
+  border-radius: 5px;
+  width: 120px;
+  text-align: center;
+}
+
+.past_appointment {
+  border-radius: 50px;
+  padding: 7px 10px;
+  border: 1.7px solid #FF2A6D;
+  background: #ff2a6e16;
+  font-size: 15.5px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.past_appointment:hover {
+  background: #ff2a6e27;
+}
+
+.appointments-list {
+  list-style: none;
+  padding: 0;
+}
+
+.appointment-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin: 10px 0;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.patient-appointment-details {
+  width: 40%;
+}
+
+strong {
+  color: rgb(44, 44, 44);
+}
+
+.slash {
+  color: #007bff;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.namePhoto {
+  display: flex;
+  flex-direction: column;
+}
+
+.namePhoto img {
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  background: gray;
+  border-radius: 50%;
+}
+
+.appointment-name {
+  cursor: pointer;
+  font-weight: bold;
+  color: #FF2A6D;
+  text-decoration: underline;
+}
+
+.appointment-details {
+  font-size: 14px;
+  color: #666;
+}
+
+.confirm-button,
+.details-button,
+.confirm-reschedule-button,
+.cancel-button,
+.close-button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.confirm-button {
+  background-color: #1eb43f;
+  color: white;
+}
+
+.confirm-button:hover {
+  background-color: #179f34;
+  transform: translateY(-1px);
+  /* Slight lift effect on hover */
+}
+
+.details-button {
+  background-color: #02b5d4;
+  color: white;
+}
+
+.details-button:hover {
+  background-color: #005679;
+  transform: translateY(-1px);
+  /* Slight lift effect on hover */
+}
+
+.confirm-reschedule-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.confirm-reschedule-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+  /* Slight lift effect on hover */
+}
+
+.cancel-button {
+  background-color: #dc3545;
+  color: white;
+  margin-left: 0;
+}
+
+.cancel-button:hover {
+  background-color: #c82333;
+  transform: translateY(-1px);
+  /* Slight lift effect on hover */
+}
+
+.close-button {
+  background-color: #6c757d;
+  color: white;
+}
+
+.close-button:hover {
+  background-color: #5a6268;
+  transform: translateY(-1px);
+  /* Slight lift effect on hover */
+}
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+    h4{
+    font-weight: bold;
+    color: black;
+    text-decoration: underline;
+  }
+  border: 2px solid black;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 225px;
+  width: 100%;
+}
+
+
+.reschedule-container {
+  label {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 15px 0;
+  gap: 10px;
+
+  button {
+    width: 222px;
+    margin-left: 0;
+  }
+
+}
+
+.reschedule-container input {
+  margin-right: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 210px;
+}
+
+h4 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+@media (max-width:768px) {
+  .past_appointment{
+    margin-top: 10px;
+    width: 215px;
+    font-size: 14px;
+  }
+
+  .appointments-container{
+    width: 85vw;
+  }
+
+  .confirm-button{
+    scale: 0.8;
+  }
+}

@@ -1,0 +1,56 @@
+/* src/styles/Notifications.css */
+
+.notifications-container {
+  padding: 10px; /* Padding for the notifications container */
+}
+
+.notifications-paper {
+  background-color: #f8f8f8; /* Light background color for notifications */
+  padding: 10px; /* Padding for the notifications container */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.notifications-paper h2 {
+  margin-top: 5px;
+  margin-bottom: 16px; /* Space below the section title */
+}
+
+.notifications-list {
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+  max-height: 400px; /* Limit height to make it scrollable */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.notification-item {
+  display: flex; /* Use flex for alignment */
+  align-items: center; /* Center align items vertically */
+  padding: 12px; /* Padding for each notification item */
+  border-bottom: 1px solid #e0e0e0; /* Separator line */
+  transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.notification-item:hover {
+  background-color: #068bbf2a; /* Change background color on hover */
+}
+
+.notification-item:last-child {
+  border-bottom: none; /* Remove separator line for the last item */
+}
+
+.notification-icon {
+  margin-right: 10px; /* Space between icon and message */
+  font-size: 1.2rem; /* Icon size */
+}
+
+.notification-message {
+  flex: 1; /* Allow message to take available space */
+  font-weight: bold; /* Make notification message bold */
+}
+
+.notification-time {
+  margin-left: 8px; /* Space between message and time */
+  color: #666; /* Light color for the time */
+  font-size: 0.9rem; /* Slightly smaller font for time */
+}
