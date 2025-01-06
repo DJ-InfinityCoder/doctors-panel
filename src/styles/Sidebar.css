@@ -1,0 +1,110 @@
+.sidebar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  max-width: 195px;
+  height: 100vh;
+  padding: 10px;
+  background-color: #005679;
+  /* Dark teal background */
+  color: #ffffff;
+  z-index: 1000;
+  transform: translateX(0);
+  /* Hide sidebar by default */
+  transition: transform 0.3s ease;
+  /* Smooth transition */
+}
+
+.sidebar.open {
+  transform: translateX(0);
+  /* Show sidebar */
+}
+
+.logo {
+  h1 {
+    margin-top: 5px;
+    text-align: center;
+  }
+
+  margin-top: 15px;
+  color: #f4eab6;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+
+}
+
+.sidebar li {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  margin: 15px 0;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color scale 1s ease-in-out;
+  /* Smooth transition */
+}
+
+.sidebar li:hover {
+  background-color: #02364b;
+  /* Hover color */
+  border-radius: 50px;
+  scale: 1.1;
+}
+
+.sidebar-link span {
+  margin-left: 15px;
+}
+
+/* Close button for mobile */
+.close-button-sidebar {
+  display: none;
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  scale: 1.5;
+  cursor: pointer;
+  color: #ffffff;
+  /* White color for visibility */
+  z-index: 100;
+  /* Ensure it stays above other elements */
+}
+
+.close-button-sidebar:active {
+  background-color: #005679;
+  border-radius: 50px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    /* Always show sidebar on larger screens */
+  }
+
+  .close-button-sidebar{
+    display: block;
+    /* Hide close button on larger screens */
+  }
+
+  .logo {
+    h1 {
+      margin-top: 25px;
+    }
+  }
+}

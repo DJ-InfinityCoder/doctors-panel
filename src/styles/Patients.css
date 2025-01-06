@@ -1,0 +1,89 @@
+/* src/styles/Patients.css */
+.patients-container {
+  padding: 10px;
+}
+
+.patients-container h2 {
+  margin-top: 5px;
+  margin-bottom: 24px;
+}
+
+.patients-paper {
+  background-color: #F8F8F8;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Make the table container scrollable on X-axis if content exceeds the width */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+.patients-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto; /* Allow table to adjust based on content */
+}
+
+.patients-table th,
+.patients-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+}
+
+.patientdet{
+  margin: 0;
+}
+
+.patients-table th {
+  background-color: #068bbf;
+  color: #f5f5f5;
+}
+
+.patients-table tr:hover {
+  background-color: #00577921;
+}
+
+.details-button {
+  padding: 6px 12px;
+  background-color: #05a9b4;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+.details-button:hover {
+  background-color: #005679;
+}
+
+.clickable-row {
+  cursor: pointer;
+}
+
+
+/* Add better scaling for mobile */
+@media (max-width: 768px) {
+  .patients-container {
+    padding: 8px;
+  }
+
+  .patients-table th, 
+  .patients-table td {
+    font-size: 14px; /* Reduce font size */
+    padding: 8px; /* Reduce padding */
+  }
+
+  .patients-paper {
+    padding: 10px;
+  }
+
+  /* Ensure the table fits the mobile width */
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on mobile */
+  }
+}

@@ -1,0 +1,33 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.page-button {
+  margin: 0 5px;
+  padding: 8px 12px;
+  border: 1px solid #005679;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.page-button:hover {
+  background-color: #00577953;
+}
+
+.page-button.active {
+  background-color: #005679;
+  color: white;
+}
+
+.page-button.ellipsis {
+  cursor: default;
+}
+
+.page-button:disabled {
+  cursor: default;
+  border: none;
+}

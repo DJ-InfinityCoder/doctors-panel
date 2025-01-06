@@ -1,0 +1,472 @@
+.dashboard-container {
+    padding: 12px;
+    /* Padding for the dashboard container */
+    height: fit-content;
+}
+
+.dashboard-heading {
+    display: flex;
+    /* Use flexbox for layout */
+    justify-content: space-between;
+    /* Space between elements */
+    align-items: center;
+    /* Center items vertically */
+    margin-bottom: 20px;
+    /* Space below the heading */
+    padding: 10px;
+    /* Optional padding */
+    border-bottom: 2px solid #005679;
+    /* Horizontal line */
+}
+
+.dashboard-heading button {
+    padding: 8px 16px;
+    /* Padding for the button */
+    border: none;
+    /* Remove default border */
+    border-radius: 4px;
+    /* Rounded corners */
+    background-color: #005679;
+    /* Button background color */
+    color: white;
+    /* Button text color */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: background-color 0.3s;
+    /* Transition for hover effect */
+}
+
+.dashboard-heading button:hover {
+    background-color: #043e55;
+    /* Darker shade on hover */
+}
+
+
+.greetings {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: -8px;
+}
+
+.greetings h4 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.greetings p {
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+.dashboard-grid-1 {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    margin-bottom: 24px;
+}
+
+.dashboard-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.report-container,
+.calendar-container,
+.recent-patients-container,
+.todays-appointments-container {
+    width: 92%;
+    background-color: #f8f8f8;
+    padding: 14px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px #00577927;
+}
+
+.report-title,
+.calendar-title,
+.recent-patients-title,
+.appointments-title {
+    margin-bottom: 16px;
+    font-size: 22px;
+    color: black;
+}
+
+.line-chart-container {
+    width: 100%;
+    margin-left: -20px;
+}
+
+/* Full-width calendar */
+.react-calendar.full-width {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background: transparent;
+    /* Background for the calendar */
+    padding: 20px;
+    /* Adds some padding for spacing */
+}
+
+/* Navigation bar styling */
+.react-calendar__navigation {
+    background-color: #078ec4;
+    /* Your specified background color */
+    color: white;
+    border-radius: 20px;
+    border: none;
+    margin-bottom: 10px;
+    /* Space between navigation and calendar body */
+}
+
+/* Buttons inside the navigation bar */
+.react-calendar__navigation button.react-calendar__navigation__label,
+.react-calendar__navigation button.react-calendar__navigation__arrow {
+    background-color: #078ec4;
+    /* Button background same as the navigation */
+    color: white;
+    border: none;
+    padding: 10px 12px;
+    font-size: 16px;
+    border-radius: 25px;
+    /* Rounded buttons */
+    transition: background-color 0.3s ease, transform 0.2s;
+    /* Smooth hover effect */
+    outline: none;
+    /* Remove focus outline */
+}
+
+/* Hover and active state for navigation buttons */
+.react-calendar__navigation button:hover.react-calendar__navigation__label,
+.react-calendar__navigation button:hover.react-calendar__navigation__arrow {
+    background-color: #056b96 !important;
+    /* Darker shade on hover */
+    /* Slight enlargement on hover */
+    cursor: pointer;
+}
+
+/* Active state and focused state for navigation label */
+.react-calendar__navigation button.react-calendar__navigation__label:focus,
+.react-calendar__navigation button.react-calendar__navigation__label:active {
+    background-color: #056b96 !important;
+    /* Custom color after it's clicked or focused */
+    color: white;
+    /* Ensure the text color remains white */
+}
+
+/* Focus/active state for navigation arrows */
+.react-calendar__navigation button.react-calendar__navigation__arrow:focus,
+.react-calendar__navigation button.react-calendar__navigation__arrow:active {
+    background-color: #078ec4 !important;
+    /* Custom color for arrows when clicked or focused */
+    color: white;
+    /* Ensure text color remains white */
+}
+
+/* Buttons with consistent active state color */
+.react-calendar__navigation button:active.react-calendar__navigation__label,
+.react-calendar__navigation button:active.react-calendar__navigation__arrow {
+    background-color: #056b96 !important;
+    /* Active state color */
+}
+
+/* Styling for the day tiles (individual dates) */
+.react-calendar__month-view__days__day {
+    color: #056b96;
+    /* Your preferred color for the days */
+    font-size: 16px;
+}
+
+.react-calendar__month-view__days__day--weekend {
+    color: #ff401f;
+}
+
+.react-calendar__tile {
+    border: none;
+    border-radius: 20%;
+}
+
+.react-calendar__tile--active {
+    background-color: #005679;
+    color: white;
+}
+
+/* More specific selector to target today's date */
+.react-calendar__tile--now,
+.react-calendar__tile--now:hover,
+.react-calendar__tile.react-calendar__month-view__days__day--now {
+    background-color: #138fc4 !important;
+    /* Apply background color for today's date */
+    color: white !important;
+    /* Apply text color */
+    font-weight: bold;
+    /* Make the text bold */
+    border-radius: 10%;
+    /* Fully circular for today's date */
+    transition: background-color 0.3s ease;
+}
+
+
+/* Dots or indicators for additional content on certain dates (e.g., events) */
+.dot {
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #ff9807;
+    /* Orange color for the dot */
+    margin: 0 auto;
+    position: relative;
+    top: 10px;
+    right: 6.5px;
+}
+
+/* Custom styling for month/year view */
+.react-calendar__month-view__weekdays__weekday {
+    color: #005679;
+    font-weight: bold;
+}
+
+/* Highlight disabled tiles */
+.react-calendar__tile--disabled {
+    color: #d3d3d3;
+    /* Lighter color for disabled dates */
+    background-color: #f0f0f0;
+}
+
+/* Month view arrows (next/previous) hover effect */
+.react-calendar__navigation button.react-calendar__navigation__arrow:hover {
+    background-color: #056b96 !important;
+    /* Darker shade for arrow buttons */
+}
+
+/* Arrows for previous and next month */
+.react-calendar__navigation button.react-calendar__navigation__arrow {
+    font-size: 18px;
+    padding: 0 15px;
+    color: white !important;
+    background-color: #078ec4;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+/* Ensure the tiles have enough space */
+.react-calendar__tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    /* Adjust to ensure tiles are square */
+}
+
+/* Removing the default focus outline */
+.react-calendar *:focus {
+    outline: none;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Tables */
+.patients-table-dashboard,
+.appointments-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+
+.patients-table-dashboard th,
+.appointments-table th {
+    background-color: #068BBF;
+    padding: 12px;
+    color: white;
+    text-align: left;
+}
+
+.namephoto {
+    display: flex;
+    flex-direction: column;
+}
+
+.patients-table-dashboard td,
+.appointments-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.patient-photo,
+.appointment-photo {
+    border-radius: 50%;
+    /* Round image */
+    width: 40px;
+    /* Width for photos */
+    height: 40px;
+    /* Height for photos */
+    margin-right: 8px;
+    /* Space to the right of images */
+}
+
+.appointment-options {
+    margin: 16px 0;
+    /* Space above and below the dropdown */
+    display: flex;
+    /* Use flexbox for alignment */
+    align-items: center;
+    /* Center items vertically */
+}
+
+.appointment-label {
+    margin-right: 10px;
+    /* Space between label and dropdown */
+    font-size: 16px;
+    /* Font size for the label */
+    color: #333;
+    /* Text color for the label */
+}
+
+.appointment-select {
+    padding: 5px;
+    /* Padding inside the dropdown */
+    border: 1px solid #ccc;
+    /* Light gray border */
+    border-radius: 4px;
+    /* Rounded corners */
+    font-size: 12px;
+    /* Font size for dropdown */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: border-color 0.3s;
+    /* Transition for border color */
+}
+
+.appointment-select:focus {
+    border-color: #005679;
+    /* Change border color on focus */
+    outline: none;
+    /* Remove default outline */
+}
+
+.act-btn {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    button {
+        width: fit-content;
+        font-size: 13px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        color: white;
+        border: none;
+    }
+}
+
+
+.cancel-btn {
+    background: #f23c3c;
+}
+
+.cancel-btn:hover {
+    background: #e70d05;
+    cursor: pointer;
+}
+
+/* <td className="act-btn">
+                    <button className="check-btn">Check Patient</button>
+                    <button className="reschedule-btn">Reschedule</button>
+                    <button className="cancel-btn">Cancel</button>
+                  </td> */
+
+.reschedule-btn {
+    background: #028bc1;
+}
+
+.reschedule-btn:hover {
+    background: #0178a6;
+    cursor: pointer;
+}
+
+.check-btn {
+    background: #37ce00;
+}
+
+.check-btn:hover {
+    background: #2a9902;
+    cursor: pointer;
+}
+
+.action-button {
+    margin-top: 10px;
+    margin: auto;
+    margin-right: 5px;
+    /* Space between buttons */
+    padding: 6px 12px;
+    /* Padding for buttons */
+    border: none;
+    /* Remove border */
+    border-radius: 4px;
+    /* Rounded corners for buttons */
+    background-color: #005679;
+    /* Button background color */
+    color: white;
+    /* Button text color */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+}
+
+.action-button:hover {
+    background-color: #02658d;
+    /* Darker shade on hover */
+}
+
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+
+    .dashboard-grid-1,
+    .dashboard-grid-2 {
+        width: 89vw;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin-bottom: 24px;
+    }
+
+    .dashboard-heading {
+        width: 93%;
+
+        button {
+            font-size: 16px;
+        }
+    }
+
+
+    .patients-table-dashboard th {
+        width: 100px;
+    }
+
+    .greetings h4 {
+        font-size: 22px;
+    }
+
+    .action-button {
+        width: 100%;
+        scale: 0.9;
+    }
+
+    .table-responsive {
+        width: 100%;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .patients-table {
+        width: 100%;
+        table-layout: auto;
+    }
+}

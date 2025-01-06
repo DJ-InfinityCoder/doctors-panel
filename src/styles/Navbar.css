@@ -1,0 +1,98 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #f8f8f8;
+  padding: 8px 20px;
+  height: 40px;
+  position: fixed;
+  /* Make the navbar fixed at the top */
+  top: 0;
+  /* Align it to the top */
+  left: 0;
+  /* Align it to the left */
+  right: 0;
+  /* Align it to the right */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Optional shadow for better visibility */
+  z-index: 999;
+}
+
+.nav-items {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  right: 20px;
+}
+
+.notification-icon,
+.account-icon {
+  color: #005679;
+  margin-left: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.username {
+  color: #005679;
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.hamburger {
+  display: none;
+  /* Hidden on larger screens */
+}
+
+.hamburger-icon {
+  color: #005679;
+  cursor: pointer;
+}
+
+/* Dropdown styling */
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  /* Adjust according to your navbar height */
+  right: 0;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  width: 150px;
+  z-index: 100;
+}
+
+.dropdown-item {
+  padding: 10px;
+  color: #005679;
+  cursor: pointer;
+  text-align: center;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    margin-top: 5px;
+    margin-left: 10px;
+    display: block;
+    scale: 1.5;
+  }
+
+  .nav-items {
+    scale: 1.2;
+    margin-right: 15px;
+  }
+
+  .account-icon,
+  .notification-icon {
+    scale: 1.35;
+    margin-left: 15px;
+  }
+
+  .username {
+    font-size: 20px;
+    margin-left: 10px;
+  }
+}
